@@ -38,7 +38,7 @@ const MainHeader = styled.section`
   height: 100vh;
   background-attachment: fixed;
   position: relative;
-  padding: 24px;
+  padding: 16px;
 `;
 const Logo = styled.div`
   width: 100px;
@@ -47,10 +47,10 @@ const Logo = styled.div`
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  font-size: ${20 / 16}rem;
-  font-weight: 350;
+  font-size: ${18 / 16}rem;
+  font-weight: 600;
   padding: 10px;
 `;
 const Nav = styled.nav`
@@ -60,11 +60,16 @@ const Nav = styled.nav`
 const NavLink = styled.a`
   color: white;
   text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid hsl(28deg 80% 52%);
+  }
 `;
 const Hero = styled.main`
   position: absolute;
   left: 18vw;
-  top: 40vh;
+  top: 42vh;
 `;
 const HeroHeading = styled.h1`
   color: white;
@@ -85,6 +90,14 @@ const Button = styled.button`
   border-radius: 20px;
   border: none;
   margin-right: 25px;
+  border: 1px solid hsl(28deg 80% 52%);
+  cursor: pointer;
+  line-height: ${20 / 16}rem;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid hsl(28deg 80% 52%);
+    color: hsl(28deg 80% 52%);
+  }
 `;
 const Img = styled.img`
   width: 100%;
